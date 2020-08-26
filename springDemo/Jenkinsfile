@@ -3,6 +3,8 @@ node {
       git 'https://github.com/SAMIMES/divers'
     }
     stage('Compile-Package'){
-     sh 'mvn package'
+       //Get Maven home Path
+     def mvnhome = tool name: 'maven 3', type: 'maven'
+        sh "${mvnhome}/bin/mvn package"
     }
 }
