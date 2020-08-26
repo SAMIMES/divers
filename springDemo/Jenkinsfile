@@ -1,0 +1,8 @@
+node {
+    stage('SCM Checkount'){
+      git 'https://github.com/SAMIMES/divers'
+    }
+    stage('Compile-Package'){
+     sh 'mvn package'
+    }
+}
