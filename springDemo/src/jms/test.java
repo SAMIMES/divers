@@ -9,8 +9,7 @@ public class test implements MessageListener {
 
 	@Override
 	public void onMessage(Message message) {
-		
-		
-		
+
+
 	}
 }

@@ -9,8 +9,9 @@
 
 	
     <!-- Define your beans here -->
-	
+	<!-- the id att: is like an Alias -->
+	<!-- the class att : fully qualified class name of implementation class -->
 	<bean id="myCoach" class="springDemo.BaseballCoach"></bean>
-	<bean id="fatouma" class="springDemo.fatmach"></bean>
+	
 	
 </beans>
