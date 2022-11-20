@@ -12,6 +12,6 @@
 	<!-- the id att: is like an Alias -->
 	<!-- the class att : fully qualified class name of implementation class -->
 	<bean id="myCoach" class="springDemo.BaseballCoach"></bean>
-	
+
 	
 </beans>
