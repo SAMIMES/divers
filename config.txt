@@ -1,0 +1,2 @@
+iocintro.couplageFaible.DaoImpl2
+iocintro.couplageFaible.MetierImpl

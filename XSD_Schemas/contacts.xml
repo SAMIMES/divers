@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Contacts xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="contacts.xsd">
+	<Person>
+		<Firstname>Sami</Firstname>
+		<Lastname>Meskaoui</Lastname>
+		<Birthday>1993-11-19</Birthday>
+		<Company>CS</Company>
+		<Position>IT Eng</Position>
+		<Email>sami@cs.fr</Email>
+		<Email>sami.meskaoui@csgroup.eu</Email>
+		<Address type="Home">
+			<Company/>
+			<Street>5 Av de la resistance</Street>
+			<City>Tournefeuille</City>
+			<Postcode>31170</Postcode>
+			<Country/>
+			<codepostale>31300</codepostale>
+		</Address>
+		<Address type="Work">
+			<Street>6 Emmanuel</Street>
+			<City>Toulouse</City>
+			<ZIP>31300</ZIP>
+			<Country>France</Country>
+			<codepostale>31300</codepostale>
+		</Address>
+	</Person>
+	<Person>
+		<Firstname>Fatma</Firstname>
+		<Lastname>AMMAR</Lastname>
+		<Company>Akkey</Company>
+    <Position/>
+		<Email>fatma@akkey.com</Email>
+	</Person>
+</Contacts>
