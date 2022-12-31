@@ -11,6 +11,6 @@
     <!-- Define your beans here -->
 	
 	<bean id="myCoach" class="springDemo.BaseballCoach"></bean>
-	<bean id="fatouma" class="springDemo.fatmach"></bean>
+	<!-- <bean id="fatouma" class="springDemo.fatmach"></bean> -->
 	
 </beans>
