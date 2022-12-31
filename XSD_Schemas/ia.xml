@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<bookstore xmlns="http://example.com/bookstore"
+           xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+           xsi:schemaLocation="http://example.com/bookstore ia.xsd">
+    <book>
+        <title>The Catcher in the Rye</title>
+        <author>J.D. Salinger</author>
+        <publisher>Little, Brown and Company</publisher>
+        <publicationYear>
+            <year>1951</year>
+        </publicationYear>
+    </book>
+    <book>
+        <title>To Kill a Mockingbird</title>
+        <author>Harper Lee</author>
+        <publisher>J.B. Lippincott &amp; Co.</publisher>
+        <publicationYear>
+            <year>1960</year>
+        </publicationYear>
+    </book>
+</bookstore>

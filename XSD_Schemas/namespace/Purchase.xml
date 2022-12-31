@@ -1,0 +1,47 @@
+<?xml version="1.0"?>
+<!--
+The first thing we see is the xsi:schemaLocation attribute in the root element. This tells the XML parser that the elements within the namespace "http://NamespaceTest.com/Purchase"
+can be found in the file "Main.xsd".
+The next thing we do is define some aliases:
+"p" to mean the namespace "http://NamespaceTest.com/Purchase"
+"c" to mean the namespace "http://NamespaceTest.com/CustomerTypes"
+"o" to mean the namespace "http://NamespaceTest.com/OrderTypes"
+"cmn" to mean the namespace "http://NamespaceTest.com/CommonTypes"
+
+You have probably noticed that every element in the schema is qualified with one of these aliases.
+
+The alias must be the same as the target namespace in which the element is defined.
+It is important to note that this is where the element is defined - not where the complexType is defined Cauz for example:
+    - the element <OrderDetail> is actually defined in main.xsd so that it is part of the namespace "http://NamespaceTest.com/Purchase", even though it uses the complexType "OrderType"
+    which is defined in the OrderTypes.xsd.
+    - The contents of <OrderDetail> are defined within the complexType "OrderType", which is in the target namespace "http://NamespaceTest.com/OrderTypes",
+    so the child element <Item> needs qualifiing within the namespace "http://NamespaceTest.com/OrderTypes".
+
+
+-->
+<p:Purchase xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="http://NamespaceTest.com/Purchase Main.xsd"
+            xmlns:p="http://NamespaceTest.com/Purchase"
+            xmlns:o="http://NamespaceTest.com/OrderTypes"
+            xmlns:c="http://NamespaceTest.com/CustomerTypes"
+            xmlns:cmn="http://NamespaceTest.com/CommonTypes">
+    <OrderDetail>
+        <o:Item>
+            <o:ProductName>PC</o:ProductName>
+            <o:Quantity>1</o:Quantity>
+            <o:UnitPrice>500.30</o:UnitPrice>
+        </o:Item>
+    </OrderDetail>
+    <PaymentMethod>VISA</PaymentMethod>
+    <p:CustomerDetails>
+        <c:Name>James</c:Name>
+        <c:DeliveryAddress>
+            <cmn:Line1>15 Some Road</cmn:Line1>
+            <cmn:Line2>SomeTown</cmn:Line2>
+        </c:DeliveryAddress>
+        <c:BillingAddress>
+            <cmn:Line1>15 Some Road</cmn:Line1>
+            <cmn:Line2>SomeTown</cmn:Line2>
+        </c:BillingAddress>
+    </p:CustomerDetails>
+</p:Purchase>

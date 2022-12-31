@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+			targetNamespace="http://www.sami.com/XML"
+			xmlns="http://www.sami.com/XML"
+			elementFormDefault="qualified">
+
+	<xsd:element name="Contacts" type="ContactType" />
+
+	<xsd:complexType name="ContactType">
+		<xsd:sequence>
+			<xsd:element ref="Person" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="Person" type="PersonType" />
+
+	<xsd:complexType name="PersonType">
+		<xsd:sequence>
+			<xsd:element name="Firstname" type="xsd:string"/>
+			<xsd:element name="Lastname" type="xsd:string"/>
+			<xsd:element name="Birthday" type="xsd:date" minOccurs="0"/>
+			<xsd:element name="Company" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Position" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Email" type="xsd:string" minOccurs="0" maxOccurs="unbounded"/>
+			<xsd:element ref="Address" minOccurs="0" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+
+	<xsd:element name="Address" type="Addr2"/>
+
+	<xsd:complexType name="Addr">
+		<xsd:sequence>
+			<xsd:element name="Company" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Department" type="xsd:string" minOccurs="0"/>
+			<xsd:element name="Street" type="xsd:string"/>
+			<xsd:element name="City" type="xsd:string"/>
+			<xsd:choice>
+				<xsd:element name="Postcode" type="xsd:string"/>
+				<xsd:element name="ZIP" type="xsd:string"/>
+			</xsd:choice>
+			<xsd:element name="Country" type="xsd:string"/>
+		</xsd:sequence>
+		<xsd:attribute name="typeAddr" type="enumTypeAddress" />
+	</xsd:complexType>
+
+
+	<xsd:simpleType name="enumTypeAddress">
+		<xsd:restriction base="xsd:string">
+			<xsd:enumeration value="Home" />
+			<xsd:enumeration value="Work" />
+		</xsd:restriction>
+	</xsd:simpleType>
+
+	<xsd:complexType name="Addr2">
+		<xsd:complexContent>
+			<xsd:extension base="Addr">
+				<xsd:sequence>
+					<xsd:element name="codepostale" type="xsd:integer" />
+				</xsd:sequence>
+			</xsd:extension>
+		</xsd:complexContent>
+	</xsd:complexType>
+
+</xsd:schema>

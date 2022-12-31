@@ -9,13 +9,11 @@
 
 	
     <!-- Define your beans here -->
-	<!-- the id att: is like an Alias -->
+    <!-- the id att: is like an Alias -->
 	<!-- the class att : fully qualified class name of implementation class -->
     <!--<bean id="myCoach" class="springDemo.SoccerCoach"></bean>-->
     <bean id="myFortune" class="springDemo.BadFortuneService"></bean>
     <bean id="myCoach" class="springDemo.SoccerCoach">
         <constructor-arg ref="myFortune"></constructor-arg>
     </bean>
-
-
 </beans>
