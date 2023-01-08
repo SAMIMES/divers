@@ -3,6 +3,7 @@
            targetNamespace="http://example.com/bookstore"
            xmlns="http://example.com/bookstore"
            elementFormDefault="qualified">
+
     <xs:element name="bookstore">
         <xs:complexType>
             <xs:sequence>
@@ -21,6 +22,7 @@
     </xs:element>
 
     <xs:element name="publicationYear" type="pby" />
+
     <xs:complexType name="pby">
         <xs:sequence>
             <xs:element name="year" type="xs:integer" />

@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Contacts xmlns:xsd="http://www.w3.org/2001/XMLSchema-instance" xsd:noNamespaceSchemaLocation="contacts.xsd">
+<Contacts xmlns="http://www.sami.com/XML"
+		  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+		  xsi:schemaLocation="http://www.sami.com/XML contacts.xsd">
 	<Person>
 		<Firstname>Sami</Firstname>
 		<Lastname>Meskaoui</Lastname>
 		<Birthday>1993-11-19</Birthday>
 		<Company>CS</Company>
 		<Position>IT Eng</Position>
-		<Email>sami@cs.fr</Email>
 		<Email>sami.meskaoui@csgroup.eu</Email>
-		<Address type="Home">
+		<Address typeAddr="Home">
 			<Company/>
 			<Street>5 Av de la resistance</Street>
 			<City>Tournefeuille</City>
@@ -16,7 +17,7 @@
 			<Country/>
 			<codepostale>31300</codepostale>
 		</Address>
-		<Address type="Work">
+		<Address typeAddr="Work">
 			<Street>6 Emmanuel</Street>
 			<City>Toulouse</City>
 			<ZIP>31300</ZIP>
