@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<products type="electronics" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="products.xsd">
+    <product id="1">
+        <name>Computer</name>
+        <size>2</size>
+        <color>Black</color>
+    </product>
+    <product id="2">
+       <name>Smartphone</name>
+        <size>2</size>
+        <color>Red</color>
+    </product>
+    <product id="3">
+        <name>Watch</name>
+        <size>2</size>
+        <color>Red</color>
+    </product>
+    <productRest>
+        <name>Fridge</name>
+        <size>2</size>
+    </productRest>
+    <productExt id="3">
+        <name>Watch</name>
+        <size>2</size>
+        <color>Red</color>
+        <!-- <Client>Sami</Client> -->
+        <Supplier>Sami</Supplier>
+    </productExt>
+
+</products>
+
+<!-- xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="products.xsd" -->
