@@ -1,6 +1,8 @@
 package threads;
 
 public class ExempleMultithread {
+
+    public static int counter = 0;
     public static void main(String[] args) {
 
         /**
@@ -15,7 +17,6 @@ public class ExempleMultithread {
         // Démarre les threads
         thread1.start();
         thread2.start();
-
 
     }
 }

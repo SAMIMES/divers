@@ -6,6 +6,8 @@ public class BonjourRunnable implements Runnable{
         for (int i = 0; i < 5; i++) {
             System.out.println("Bonjour");
             try {
+
+                ExempleMultithread.counter ++ ;
                 // Fait une pause de 500 ms
                 Thread.sleep(500);
             } catch (InterruptedException e) {
